@@ -1,0 +1,116 @@
+@import 'https://fonts.googleapis.com/css?family=Quicksand:300,400,600,700';
+
+.case-studies-block {
+    font-family: 'Quicksand', sans-serif;
+
+    &__filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        justify-content: left;
+        margin-left: 40px;
+        margin-right: 40px;
+        // Element: Kontener na przyciski filtrów
+    }
+
+    &__filter-btn {
+        padding: 0.75rem 1.5rem;
+        border:0;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        font-weight: bold;
+        color: #37474F;
+        background:transparent;
+        &:hover, &.is-active {
+            background-color: #EEC536;
+            
+        }
+    }
+	
+	&__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Dwie kolumny na desktopie
+        gap: 2rem;
+        // Element: Kontener elementów
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // Jedna kolumna na urządzeniach mobilnych
+        }
+    }
+
+    &__item {
+        background-color: #fff; // Białe tło
+        overflow: hidden;
+    }
+
+    &__link {
+        text-decoration: none;
+         color: #37474F;
+        display: block;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        padding-top: 66.66%;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        padding: 46px;
+    }
+
+    &__categories-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 0.5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        color: #37474F;
+    }
+
+    &__category {
+        font-size: 0.8rem;
+
+        &:not(:last-child)::after {
+            content: " /";
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        margin: 0;
+        color: #37474F;
+    }
+
+    &__readmore {
+        font-size: 1.0rem;
+        margin: 0;
+        color: #37474F;
+        padding-bottom:5px;
+        border-bottom: 4px solid #EEC536;
+        text-decoration: none;
+        margin-top: 20px;
+        display: inline-block;
+        font-weight: 600;
+        padding: 5px 10px;
+        transition: background-color 0.3s, color 0.3s;
+        &:hover {
+            background-color:#EEC536;
+            color: #37474F;
+        }
+          &:visited {
+            color: #37474F;
+        }
+    }
+}
